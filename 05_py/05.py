@@ -9,9 +9,6 @@
 # Discoveries
 # The random.randrange function is cleaner and easier to read than using random.random. The random library has a randint function that is inclusive. This is not ideal for a lot of cases in python. In our case, we used randrange because the stop parameter is exclusive. I also learned that it is hard to find out the names of all the students in each class. One solution I came up with but did not implement because of potential complexity to use a scrapper like beautiful soup to get the links to the repos, and then use that to scrape everyones github to get their display names.
 
-# Questions
-# 
-
 from random import randrange
 
 # List people for periods 1 and 2

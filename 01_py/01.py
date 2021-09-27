@@ -1,3 +1,8 @@
+# Shadman Rakib
+# SoftDev
+# CLSWRK - Student Name Printer
+# 2021-09-22
+
 from random import randrange
 
 # List people for periods 1 and 2

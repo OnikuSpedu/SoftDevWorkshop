@@ -37,5 +37,5 @@ def main():
     except FileNotFoundError: 
         print('File "%s" does not exist' % (filename)) 
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     main()

@@ -1,57 +1,41 @@
-# Shadman Rakib
+# The Red Imposter || Daniel Sooknanan, Roshani Shrestha, Shadman Rakib
 # SoftDev
-# HW - StI/O Weighted Random
-# 2021-09-28
+# 06_py-csv.py: Returns a random Job Class based on their respective
+# frequenies given a .csv file of Job Classes & Percentages
+# 2021-09-16
 
 # My team used the DictReader function from the csv module 
 # to create rows of dictionaries where the keys are 
 # "Job Class" and "Percentage". We used the choices function
 # from the random module to return a key from the dictionary
-# using weighted probability. This implementation uses several
-# functions to organize the code. None is returned when there
-# is an error. I intended for it to act as "null" or "undefined"
-# in other languages.
+# using weighted probability.
 
 from csv import DictReader
-from random import choices 
-
-fileName = 'occupations.csv'
-
-def generateOccupationDict():
-    try:
-        occ_dict = {}
-        with open(fileName) as csvfile:
-            reader = DictReader(csvfile)
-            for row in reader:
-                occ_dict[row['Job Class']] = float(row['Percentage']) #parse into float
-        
-        occ_dict.pop('Total')
-
-        return occ_dict
-    except FileNotFoundError:
-        print('File "%s" does not exist' % (fileName))
-        return None
-
-def getWeightedRandomKeyFromDict(d):
-    #use random.choices function to get random element on list using weights.
-    #random.choices returns a list. we only want the value at index 0
-    return choices(list(d.keys()), d.values(), k=1)[0]
-
-def getWeightedRandomOccupation():
-    # generates dict
-    occ_dict = generateOccupationDict()
-
-    if (occ_dict != None):
-        result = getWeightedRandomKeyFromDict(occ_dict)
-        return result
-    else:
-        return None
+from random import choices
 
 def main():
-    result = getWeightedRandomOccupation()
 
-    if (result != None):
-        print(getWeightedRandomOccupation())
+    occ_dict = {} # Create a dictionary to be filled in
+    filename = 'occupations.csv' # Specifies the target .csv file
 
-if __name__ == "__main__":
+    try:
+        with open(filename) as csvfile:
+            reader = DictReader(csvfile)
+            for row in reader: 
+                # Fill in the dictionary with Job Classes as keys & Percentages as values
+                occ_dict[row['Job Class']] = float(row['Percentage']) 
+
+        if 'Total' in occ_dict.keys(): 
+            occ_dict.pop('Total') # Remove the Total at the end of the .csv file if it exists
+
+        # Get the first item in a list that is length k (in this case 1)
+        # The randomness of a key appearing is weighted based on its respective value
+        result = choices(list(occ_dict.keys()), weights=occ_dict.values(), k=1)[0]
+        print(result)
+        return(result)
+
+    except FileNotFoundError: 
+        print('File "%s" does not exist' % (filename)) 
+
+if _name_ == "_main_":
     main()

@@ -4,7 +4,7 @@ K08: Cross Pollination and Virtual Insanity
 2021-09-30
 
 
-###Team Sneakers: Michael Borczuk, Kevin Cao, Yoonah Chang
+Team Sneakers: Michael Borczuk, Kevin Cao, Yoonah Chang
 (https://github.com/kcao20/workshop/blob/main/06_py-csv/random-occupations.py)
 Q: 
 * Why did you use randint instead of randrange?
@@ -16,7 +16,7 @@ C:
 C: 
 * Writing your own functions would be harder to maintain long term compared to using an active library/module.
 
-###Fabulous Frogs: David Chong, Wen Hao Dong, Austin Ngan (https://github.com/austinngan/SoftDev/blob/main/06_py-csv/K06.py)
+Fabulous Frogs: David Chong, Wen Hao Dong, Austin Ngan (https://github.com/austinngan/SoftDev/blob/main/06_py-csv/K06.py)
 Q: 
 * Does the code take quotes that are not matched into account?
 C:
@@ -25,7 +25,7 @@ C:
 C:
 * Most likely a slower method/approach
 
-###The Red Imposter: Daniel Sooknanan, Shadman Rakib, Roshani Shrestha
+The Red Imposter: Daniel Sooknanan, Shadman Rakib, Roshani Shrestha
 (https://github.com/OnikuSpedu/SoftDevWorkshop/blob/master/06_py-csv/06_py-csv.py)
 Q: 
 * The total is not 100%. How does this take that into account?

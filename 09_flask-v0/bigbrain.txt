@@ -1,0 +1,27 @@
+Drippy Duo: Austin Ngan (with Gerald) and Shadman Rakib (with Chicken)
+Softdev
+K09: Simple Path to Greatness
+2021-10-01
+
+Q0: 
+We’ve seen this syntax in Java, where a variable is defined as a class/subclass. The __name__ is passed to the constructor. Perhaps, __name__ is a special variable that python provides during runtime.
+
+Q1: 
+The point of reference could be the use of app.route, which possibly means the route that is necessary to be taken to access the program. So, in this case, the hello_world function is called when the index “/” route is requested.
+
+NEW THOUGHTS:
+The route refers to the ip address that the program runs on?
+Is the @app.route a decorator?
+
+Q2: 
+print(__name__) would print the name of the module the code is running in. So, if it is directly being run, it will print ‘__main__’
+
+NEW THOUGHTS:
+print(__name__) prints to the console of the machine that the app is running on, but not on the main page. Only “No hablo queso!” being returned to the app.
+
+Q3: 
+print(__name__) prints out in the terminal.
+This will appear on the main page (the route “/”) all the time because it is returning a string to the app.
+
+Q4:
+We’ve seen this construc in Java when running a function from a class within a program. For example, if a class named Dog is created, then the methods that pertain to the Dog class can only be run by things that are declared as the Dog class. Then, by using the name of whatever is declared as something part of the class, you can call the method, meaning a Dog class variable named Jim can run a method by doing Jim.run().

@@ -13,4 +13,4 @@ in the terminal followed by __name__ which is "__main__". On the browser, "No ha
 will display changes quickly. 
 
 Results: 
-It worked as predicted. The browser could not connect to the links in foo.html and foo.
+It worked as predicted.

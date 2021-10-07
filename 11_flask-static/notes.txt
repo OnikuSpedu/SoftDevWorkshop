@@ -1,0 +1,16 @@
+The Red Imposter | Daniel Sooknanan, Shadman Rakib, and Roshani Shrestha
+SoftDev
+K11: Some Things Never Change - Details predictions and results of the files in 11_flask-static
+2021-10-07
+
+Predictions:
+If flask is not being run, for foo.html, http://localhost:5000/static/foo.html will not work. This is because the server is not up and running, so nothing will 
+get served. If flask is not being run, for foo, http://localhost:5000/static/foo will also not work because the server is not running, so nothing will be served. 
+If flask is running, for foo.html, http://localhost:5000/static/foo.html will return foo.html, and it will be rendered.
+If flask is running, for foo, http://localhost:5000/static/foo will return foo, and it will be downloaded.
+The app.py file will produce very similar results to previous app.py files analyzed. After opening the link, it will print "the __name__ of this module is... " 
+in the terminal followed by __name__ which is "__main__". On the browser, "No hablo queso!" is printed. Debug mode is on, so refreshing the page 
+will display changes quickly. 
+
+Results: 
+It worked as predicted. The browser could not connect to the links in foo.html and foo.

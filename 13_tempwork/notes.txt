@@ -1,0 +1,9 @@
+# The Red Imposter | Daniel Sooknanan, Shadman Rakib, and Roshani Shrestha
+# SoftDev
+# K12 : Jinja
+# 2021-10-08
+
+Answers to Questions:
+0) If you remove render_template from the import line, then there will be an error when we try to load the "/my_foist_template" page.
+1) All my teammates can confidently predict the URL to load the "/my_foist_template" page. It is specified in the route decorator.
+2) Each argument is referenced in the model_tmplt file. The render_template perhaps uses these arguments to generate the file using the template. The model_tmplt.html uses special syntax (I'm guessing Jinja) that allows for the arguments to be used in the template.

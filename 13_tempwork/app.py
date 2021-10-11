@@ -1,41 +1,46 @@
-# The Red Imposter | Daniel Sooknanan, Roshani Shrestha, Shadman Rakib
-# SoftDev
-# Oct 2021
+#Team Team : Alif Abdullah, Eric Guo, Shadman Rakib Period 2
+#SoftDev
+#K13 - To create a flask app that randomly chooses and displays an occupation based on a template
+#10/8/21
+import csv
+import random
+from flask import Flask, render_template
 
-from flask import Flask
-from csv import DictReader
-from random import choices
-
+# Declaration of dictionary to store CSV File contents
+finalDict = {}
+# Create instance of flask app
 app = Flask(__name__)
 
-def getRandomOccupation():
+# Read in CSV file
+def fileReader():
+    with open('data/occupations.csv', newline='') as csvfile:
+        reader = csv.DictReader(csvfile)
+        for row in reader:
+            finalDict[row['Job Class']] = float(row['Percentage'])
 
-    occ_dict = {} # Create a dictionary to be filled in
-    filename = 'occupations.csv' # Specifies the target .csv file
+# Choose random job from dictionary
+def randomJob(reader):
+    x = random.randint(0, 1000)
+    y = 0
+    for i in reader:
+        y += reader[i] * 10
+        if y > x:
+            return i
+            break
 
-    try:
-        with open(filename) as csvfile:
-            reader = DictReader(csvfile)
-            for row in reader:
-                # Fill in the dictionary with Job Classes as keys & Percentages as values
-                occ_dict[row['Job Class']] = float(row['Percentage'])
+# Running the flask app with displayApp function
+@app.route("/occupyflaskst")
+def displayApp():
+    fileReader()
+    return render_template('tablified.html',heading="Alif Abdullah SoftDev K13 - To create a flask app that randomly chooses and displays an occupation based on a template 10/8/21",
+                           title="Weighted Random Occupations Chooser",tnpg="Team Team : Alif Abdullah, Eric Guo, Shadman Rakib Period 2",collection=finalDict,chosenJob=("Chosen Job: " + str(randomJob(finalDict))))
+    
+    '''return ("Team Team - Alif Abdullah, Eric Guo, Shadman Rakib Period 2 <br><br>List of occupations: <br>" +
+        str(list(finalDict.keys())[:len(list(finalDict.keys()))-1]) +
+        "<br><br>Chosen Occupation: " + str(randomJob(finalDict)))
+    '''
 
-        if 'Total' in occ_dict.keys():
-            occ_dict.pop('Total') # Remove the Total at the end of the .csv file if it exists
-
-        # Get the first item in a list that is length k (in this case 1)
-        # The randomness of a key appearing is weighted based on its respective value
-        result = choices(list(occ_dict.keys()), weights=occ_dict.values(), k=1)[0]
-        return(result)
-
-    except FileNotFoundError:
-        print('File "%s" does not exist' % (filename))
-        return 'File "%s" does not exist' % (filename)
+app.debug = True
+app.run()
 
 
-@app.route("/occupyflaskst") 
-def main():
-    return str(getRandomOccupation())
-
-if __name__ == "__main__":
-    app.run()

@@ -32,9 +32,9 @@ def randomJob(reader):
 @app.route("/occupyflaskst")
 def displayApp():
     fileReader()
-    return render_template('tablified.html',heading="Alif Abdullah SoftDev K13 - To create a flask app that randomly chooses and displays an occupation based on a template 10/8/21",
+    return render_template('tablified.html',names="Alif Abdullah", assignment="SoftDev K13 - To create a flask app that randomly chooses and displays an occupation based on a template", date="10/8/21",
                            title="Weighted Random Occupations Chooser",tnpg="Team Team : Alif Abdullah, Eric Guo, Shadman Rakib Period 2",collection=finalDict,chosenJob=("Chosen Job: " + str(randomJob(finalDict))))
-    
+
     '''return ("Team Team - Alif Abdullah, Eric Guo, Shadman Rakib Period 2 <br><br>List of occupations: <br>" +
         str(list(finalDict.keys())[:len(list(finalDict.keys()))-1]) +
         "<br><br>Chosen Occupation: " + str(randomJob(finalDict)))
@@ -42,5 +42,3 @@ def displayApp():
 
 app.debug = True
 app.run()
-
-

@@ -1,3 +1,9 @@
+Notable notables: 
 I also believe that programmers are quite detached to social interactions and attached to their programs.
 I also noticed that programmers attach their egos to their work and treat their work as a direction reflection of themselves. This can be detrimental can make the programmer blind to defects with the code.
+If a variable is referenced in the template but not supplied as a kwarg, it ends up blank
+
+EGO 
 We must be able to accept that we may have errors and other may as well. We need to be able to foster an environment where we can be accepting of this and learn from it instead.
+
+

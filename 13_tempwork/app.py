@@ -27,18 +27,18 @@ def randomJob(reader):
         if y > x:
             return i
             break
-
+        
+@app.route("/")
+def homePage():
+    return("new phone, who dis?")
+    
 # Running the flask app with displayApp function
 @app.route("/occupyflaskst")
 def displayApp():
     fileReader()
-    return render_template('tablified.html',names="Alif Abdullah", assignment="SoftDev K13 - To create a flask app that randomly chooses and displays an occupation based on a template", date="10/8/21",
-                           title="Weighted Random Occupations Chooser",tnpg="Team Team : Alif Abdullah, Eric Guo, Shadman Rakib Period 2",collection=finalDict,chosenJob=("Chosen Job: " + str(randomJob(finalDict))))
+    return render_template('tablified.html',names="Alif Abdullah", course="SoftDev", assignment="K13 - To create a flask app that randomly chooses and displays an occupation based on a template", date="10/8/21",
+                           title="Weighted Random Occupations Chooser",tnpg="Team Team : Alif Abdullah, Eric Guo, Shadman Rakib Period 2",collection=finalDict,tab_space=": ", chosenJob=("Chosen Job: " + str(randomJob(finalDict))))
 
-    '''return ("Team Team - Alif Abdullah, Eric Guo, Shadman Rakib Period 2 <br><br>List of occupations: <br>" +
-        str(list(finalDict.keys())[:len(list(finalDict.keys()))-1]) +
-        "<br><br>Chosen Occupation: " + str(randomJob(finalDict)))
-    '''
 
 app.debug = True
 app.run()

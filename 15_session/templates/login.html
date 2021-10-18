@@ -38,7 +38,9 @@ K14 -- Forms using Flask
       <input type="password" name="password">
       <input type="submit" name="sub1">
 
-      {{error}}
+      {% if error is defined %}
+          Error: {{ error }}
+      {% endif %}
     </form>
     <br>
   </body>

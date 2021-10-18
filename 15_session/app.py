@@ -15,15 +15,29 @@ def disp_loginpage():
     return render_template( 'login.html' ) # Render the login template
 
 
-@app.route("/auth", methods=['GET', 'POST']) # , methods=['GET', 'POST'])
+@app.route("/auth") # , methods=['GET', 'POST'])
 def authenticate():
     # The requests property contains the values property. The value property contains
-    # data from both requests.args and requests.form. 
+    # data from both requests.args and requests.form.
 
-    username = request.values['username'] 
+    account_username = "test"
+    account_password = "pw"
 
-    # request.method specifies whether the request in our case specifies if it is a GET or POST request.
-    request_method = request.method
+    username = None
+    password = None
+
+    if request.method == "GET":
+        username = request.args['username']
+        password = request.args['password']
+
+    else if request.method == "POST":
+        username = request.form['username']
+        password = request.form['password']
+
+        if username == account_username:
+            if password == account_password:
+        else:
+            return render_template('login.html', username=username, error="Wrong username")
 
     #response to a form submission. passes down the username and method
     return render_template('auth.html', username=username, method=request_method)

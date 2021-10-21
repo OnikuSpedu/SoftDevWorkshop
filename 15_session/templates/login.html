@@ -1,19 +1,8 @@
 <!DOCTYPE html>
-<!--
-Team Name: Sleepy Programmers: Andy Lin, Shadman Rakib, Raymond Yeung
+<!-- Team Name: Sleepy Programmers: Andy Lin, Shadman Rakib, Raymond Yeung
 SoftDev
-K14 -- Forms using Flask
-2021-10-14F
-
-     simple demo of HTML forms via Flask
-
-     trioTASK:
-     If any member of team has forms experience, let their know-how osmote.
-     If no one does, seek external assistance.
-     PROTIP: Revisit code from intro if you have it.
-     Peruse this code together and discuss how it should work, in conjunction with the back end apparatus.
-
- -->
+K15 -- User sessions on website via Flask
+2021-10-18 -->
 
 
 <html>
@@ -24,22 +13,27 @@ K14 -- Forms using Flask
 
   <body>
     <h1>
-      Welcome, Travelers of the Intertoobz!
+      Welcome from Team Sleepy Programmers: Andy Lin, Shadman Rakib, Raymond Yeung.
     </h1>
 
 
     <h3>
-      Enter your username and password below to proceed.
+      Enter your username below to proceed.
     </h3>
-
-    <!-- the attribute method is set to POST to submit the data in a POST request -->
     <form action="/auth" method="POST">
+      Username:
       <input type="text" name="username">
+      <br>
+      Password:
       <input type="password" name="password">
+      <br>
       <input type="submit" name="sub1">
+      <br>
 
-      {% if error is defined %}
-          Error: {{ error }}
+      {% if error == "username"%}
+      Wrong username!
+      {% elif error == "password"%}
+      Wrong password!
       {% endif %}
     </form>
     <br>

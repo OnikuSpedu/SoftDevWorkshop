@@ -1,5 +1,5 @@
 #Clyde "Thluffy" Sinclair
-#SoftDev  
+#SoftDev
 #skeleton/stub :: SQLITE3 BASICS
 #Dec 2020 -- The Time of the Rona
 
@@ -17,13 +17,35 @@ c = db.cursor()               #facilitate db ops -- you will use cursor to trigg
 
 # < < < INSERT YOUR TEAM'S POPULATE-THE-DB CODE HERE > > >
 
+courses = []
 
-command = ""          # test SQL stmt in sqlite3 shell, save as string
+with open('courses.csv', newline='') as file:
+    reader = csv.DictReader(file)
+    for row in reader:
+        code = row['code']
+        mark = row['mark']
+        id = row['id']
+
+        courses.append({
+            code: code,
+            mark: mark,
+            id: id
+        })
+
+
+
+command = "CREATE TABLE courses (code TEXT, mark INTEGER, id INTEGER PRIMARY KEY)"          # test SQL stmt in sqlite3 shell, save as string
 c.execute(command)    # run SQL statement
+
+for course in courses:
+    code = course['code']
+    mark = course['mark']
+    id = course['id']
+
+    addCourseCommand = "INSERT INTO courses VALUES (%s, %s, %s);" % (code, mark, id)          # test SQL stmt in sqlite3 shell, save as string
+    c.execute(addCourseCommand)    # run SQL statement
 
 #==========================================================
 
 db.commit() #save changes
 db.close()  #close database
-
-

@@ -1,5 +1,5 @@
 #Clyde "Thluffy" Sinclair
-#SoftDev
+#SoftDev  
 #skeleton/stub :: SQLITE3 BASICS
 #Dec 2020 -- The Time of the Rona
 
@@ -14,38 +14,26 @@ c = db.cursor()               #facilitate db ops -- you will use cursor to trigg
 
 #==========================================================
 
+c.execute("CREATE TABLE roster(name TEXT, age INTEGER, userid INTEGER)")
 
-# < < < INSERT YOUR TEAM'S POPULATE-THE-DB CODE HERE > > >
+with open('students.csv', newline='') as studentcsv:
+    toRead = csv.DictReader(studentcsv)
+    for student in toRead:
+        c.execute("INSERT INTO roster VALUES (\""+student['name']+"\", "+student['age']+", "+student['id']+")")
 
-courses = []
+c.execute("CREATE TABLE courses(code TEXT, mark INTEGER, id INTEGER)")
 
-with open('courses.csv', newline='') as file:
-    reader = csv.DictReader(file)
-    for row in reader:
-        code = row['code']
-        mark = row['mark']
-        id = row['id']
+with open('courses.csv', newline='') as coursescsv:
+    toRead = csv.DictReader(coursescsv)
+    for course in toRead:
+        c.execute("INSERT INTO courses VALUES (\""+course['code']+"\", "+course['mark']+", "+course['id']+")")
 
-        courses.append({
-            code: code,
-            mark: mark,
-            id: id
-        })
-
-
-
-command = "CREATE TABLE courses (code TEXT, mark INTEGER, id INTEGER PRIMARY KEY)"          # test SQL stmt in sqlite3 shell, save as string
+command = ""          # test SQL stmt in sqlite3 shell, save as string
 c.execute(command)    # run SQL statement
-
-for course in courses:
-    code = course['code']
-    mark = course['mark']
-    id = course['id']
-
-    addCourseCommand = "INSERT INTO courses VALUES (%s, %s, %s);" % (code, mark, id)          # test SQL stmt in sqlite3 shell, save as string
-    c.execute(addCourseCommand)    # run SQL statement
 
 #==========================================================
 
 db.commit() #save changes
 db.close()  #close database
+
+

@@ -1,3 +1,8 @@
+# Team Name: Knoteem: Shadman Rakib, David Chong
+# SoftDev Pd2
+# K19 - Using REST Apis to render templates
+# 2021-10-20
+
 from flask import Flask             #facilitate flask webserving
 from flask import render_template   #facilitate jinja templating
 from flask import request           #facilitate form submission
@@ -9,7 +14,10 @@ app = Flask(__name__)    #create Flask object
 @app.route("/")
 def index():
     try:
-        with urllib.request.urlopen('https://api.nasa.gov/planetary/apod?api_key=qCaKTCSbD1TEUVHrFpoZwyhLAhP2g1pw9lw1wP00') as response:
+        key_file = open("key_nasa.txt", "r")
+        key = key_file.read()
+
+        with urllib.request.urlopen('https://api.nasa.gov/planetary/apod?api_key='+key) as response:
            unparsed = response.read()
            data = json.loads(unparsed)
            return render_template('main.html', data = data) # Render the login template

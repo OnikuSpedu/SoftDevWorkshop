@@ -1,34 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- Clyde "Thluffy" Sinclair
-       SoftDev pd0
+<!-- Shadman Rakib
+       SoftDev pd2
        K18 -- CSS basics
        2021-11-23t
 
-	 WORK FILE for CSS 	
+	 WORK FILE for CSS
     -->
 
-  <head>
-    <meta charset="utf-8"/>
+<head>
+    <meta charset="utf-8" />
     <title>foo title</title>
-  </head>
+    <style>
+        body {
+            background: #666;
+        }
+        
+        #container {
+            display: flex;
+            flex-direction: column;
+            background: #777;
+        }
+        
+        #headingContainer {
+            background: #DDD;
+            height: 54px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        #headingContainer>h1 {
+            color: white;
+            margin: 0px;
+        }
+        
+        #main {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            padding: 0px 16px;
+        }
+        
+        ul {
+            list-style: none;
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        ul>li>a {
+            text-decoration: none;
+            color: #DDD;
+        }
+        
+        footer {
+            background: #555;
+            height: 54px;
+            display: flex;
+            align-items: center;
+            justify-content: right;
+            color: #888;
+            padding: 0px 16px;
+        }
+    </style>
+</head>
 
-  <body>
-    <h1>foo heading 1</h1>
-    <h3>nav foo</h3>
-    <ul>
-      <li><a href="">dis</a></li>
-      <li><a href="">dat</a></li>
-      <li><a href="">de udda ting</a></li>
-    </ul>
-    <h2>main foo heading</h2>
-    <p>tk tk tk tk tk tk tk tk tk tk tk tk tk tk tk tk tk tk tk tk 
+<body>
+    <div id="container">
+        <div id="headingContainer">
+            <h1>foo heading 1</h1>
+        </div>
+        <div id="main">
+            <div>
+                <h3>nav foo</h3>
+                <ul>
+                    <li><a href="">dis</a></li>
+                    <li><a href="">dat</a></li>
+                    <li><a href="">de udda ting</a></li>
+                </ul>
+            </div>
+            <div>
+                <!-- Lorem Lorem placeholder generated using VSCode Emmet lorem abbreviation. -->
 
-      <br>
-      <br>
-
-      Copyright &copy; 2021 Clyde "Thluffy" Sinclair
-
-  </body>
+                <h2>main foo heading</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, dolores! Officiis dolore earum cumque consectetur at, quidem eius inventore amet incidunt ut blanditiis facere asperiores ratione quis rerum soluta expedita explicabo est necessitatibus exercitationem?
+                    Error porro, omnis fuga ducimus accusantium quas culpa vero! Delectus libero cum maxime totam, ipsam facere!
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, dolores! Officiis dolore earum cumque consectetur at, quidem eius inventore amet incidunt ut blanditiis facere asperiores ratione quis rerum soluta expedita explicabo est necessitatibus exercitationem?
+                    Error porro, omnis fuga ducimus accusantium quas culpa vero! Delectus libero cum maxime totam, ipsam facere!
+                </p>
+                <p>
+                    Lorem placeholder generated using VSCode Emmet lorem abbreviation.
+                </p>
+            </div>
+        </div>
+        <footer>
+            Copyright &copy; 2021 Clyde "Thluffy" Sinclair
+        </footer>
+    </div>
+</body>
 
 </html>

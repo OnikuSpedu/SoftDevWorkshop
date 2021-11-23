@@ -1,0 +1,49 @@
+body {
+    background: #666;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    background: #777;
+}
+
+#headingContainer {
+    background: #DDD;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#headingContainer>h1 {
+    color: white;
+    margin: 0px;
+}
+
+#main {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    padding: 0px 16px;
+}
+
+ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+ul>li>a {
+    text-decoration: none;
+    color: #DDD;
+}
+
+footer {
+    background: #555;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    color: #888;
+    padding: 0px 16px;
+}

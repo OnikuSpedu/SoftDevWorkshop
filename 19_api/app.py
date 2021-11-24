@@ -9,16 +9,22 @@ from flask import request           #facilitate form submission
 import urllib.request
 import json
 
-app = Flask(__name__)    #create Flask object
+app = Flask(__name__) #create Flask object
 
 @app.route("/")
 def index():
+    '''Fetches data from Nasa endpoint and renders template'''
+    
     try:
-        key_file = open("key_nasa.txt", "r")
-        key = key_file.read()
+        key_file = open("key_nasa.txt", "r") # Open file that contains key
+        key = key_file.read() # Read the key from the file
 
-        with urllib.request.urlopen('https://api.nasa.gov/planetary/apod?api_key='+key) as response:
+        #send a request to the nasa api with the key using urllib
+        with urllib.request.urlopen('https://api.nasa.gov/planetary/apod?api_key=' + key) as response:
+           # read the response
            unparsed = response.read()
+
+           # turn response into dictionary
            data = json.loads(unparsed)
            return render_template('main.html', data = data) # Render the login template
     except:

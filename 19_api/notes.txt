@@ -1,0 +1,12 @@
+Team Name: Knoteem: Shadman Rakib, David Chong
+SoftDev Pd2
+K19 - Using REST Apis to render templates
+2021-10-20
+
+In order to read key_file.txt, you have to use open() to open the file 
+and return a file object, then use the read method on the returned file 
+object to get the content of the file.
+
+To make a GET request to the api, urllib.request.urlopen([INSERT API URL]).
+In order to get the JSON response, you have to use the read method. This
+returns a string, which needs to be parsed into a dictionary.

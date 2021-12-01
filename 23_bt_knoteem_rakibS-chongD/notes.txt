@@ -1,0 +1,22 @@
+Team Knoteem: Shadman Rakib, David Chong
+SoftDev
+K23
+
+DISCO
+Using class style utilities is so much easier and quicker than
+adding custom CSS. The development experience is much better.
+I feel like I can do most things with Bootstrap. Bootstrap feels
+more fleshed out than foundation.
+
+QCC
+Why is style outside of head?
+Is that SASS/SCSS inside of the style tag? Doesn't SASS need to be compiled?
+
+Q0
+Yes, the group only provided the starting template with the CDN.
+
+Q1
+I prefer bootstrap because it provides more utilities by default.
+It provides padding utilities, margin, background, font, etc.
+The documentation is clearer and there is a more active
+community.

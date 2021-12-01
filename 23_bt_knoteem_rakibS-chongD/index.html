@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+  Team Knoteem: Shadman Rakib, David Chong
+  SoftDev
+  K23
+ -->
+
+<html>
+
+  <head>
+    <!-- resizes for different devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title> Bootstrap </title>
+  </head>
+
+  <body style="background: var(--bs-gray-200)">
+    <div class="container">
+      <h1 class="">This is an awesome example site</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <button type="button" name="button" class="button shadow button">Example button</button>
+    </div>
+  </body>
+
+<style>
+  // Generate contextual modifier classes for colorizing the alert.
+
+  @each $state, $value in $theme-colors {
+    $alert-background: shift-color($value, $alert-bg-scale);
+    $alert-border: shift-color($value, $alert-border-scale);
+    $alert-color: shift-color($value, $alert-color-scale);
+    @if (contrast-ratio($alert-background, $alert-color) < $min-contrast-ratio) {
+      $alert-color: mix($value, color-contrast($alert-background), abs($alert-color-scale));
+    }
+    .alert-#{$state} {
+      @include alert-variant(indigo-100, indigo-300, indigo-500);
+    }
+  }
+
+</style>
+
+</html>

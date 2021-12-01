@@ -18,53 +18,204 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body>
+  <body class="border-box padding-top-2">
     <ul class="menu">
       <li><a href="#getstarted">Get Started</a></li>
       <li><a href="#templates">Templates</a></li>
-      <li><a href="#">Three</a></li>
+      <li><a href="#buildingblocks">Building Blocks</a></li>
+      <li><a href="#prototypingutilities">Prototyping Utilities</a></li>
       <li><a href="#docs">Documentation</a></li>
     </ul>
 
-    <h1>Foundation in 3 min</h1>
+    <h1>Foundation in 5 min</h1>
 
     <div id="getstarted">
       <h2>Getting started</h2>
       <p>The quickest way to get started is by using the Foundation CDN.</p>
       <p>Add the following in the head html tag</p>
       <code>
-        &lt;link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation.min.css"
-          crossorigin="anonymous"
-        /&gt;
+        &lt;link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation.min.css"
+        crossorigin="anonymous" /&gt;
 
         <!-- Compressed JavaScript -->
         &lt;script
-          src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/js/foundation.min.js"
-          crossorigin="anonymous"
-        &gt;&lt;/script&gt;
+        src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/js/foundation.min.js"
+        crossorigin="anonymous" &gt;&lt;/script&gt;
       </code>
       <p>Add the following to the body html tag</p>
       <code>
-        &lt;script&gt;
-        $(document).foundation();
-        &lt;/script&gt;
+        &lt;script&gt; $(document).foundation(); &lt;/script&gt;
       </code>
     </div>
 
     <div id="templates">
       <h2>Templates</h2>
-      <p>Foundation provides a selection of templates for developers to create slick, modern sites even quicker. You can view all the templates at <a href="https://get.foundation/templates.html">https://get.foundation/templates.html</a></p>
+      <p>
+        Foundation provides a selection of templates for developers to create
+        slick, modern sites even quicker. You can view all the templates at
+        <a href="https://get.foundation/templates.html"
+          >https://get.foundation/templates.html</a
+        >
+      </p>
     </div>
 
     <div id="buildingblocks">
-      <a href="https://get.foundation/building-blocks/">https://get.foundation/building-blocks/</a>
+      <h2>Building Blocks</h2>
+      <p>
+        Foundation community has created code snippets, called building blocks.
+        You can view all the building blocks at
+        <a href="https://get.foundation/building-blocks/"
+          >https://get.foundation/building-blocks/</a
+        >
+      </p>
+    </div>
+
+    <div id="forms">
+      <h2>Forms</h2>
+      <p>
+        Here are snippets you can use for forms. Note how most of the form input
+        types are styled.
+      </p>
+      <div>
+        <label
+          >Input Label
+          <input type="text" placeholder=".medium-6.cell" />
+        </label>
+      </div>
+      <pre>
+        
+  &lt;label&gt;
+    Input Label
+    &lt;input type=&quot;text&quot; placeholder=&quot;.medium-6.cell&quot; /&gt;
+  &lt;/label&gt;
+
+      </pre>
+      <div>
+        <label
+          >Input Label
+          <input type="number" value="100" />
+        </label>
+      </div>
+      <pre>
+          
+    &lt;label&gt;
+      Input Label
+      &lt;input type=&quot;number&quot; value=&quot;100&quot; /&gt;
+    &lt;/label&gt;
+  
+        </pre
+      >
+
+      <div>
+        <label>
+          Textarea label
+          <textarea placeholder="None"></textarea>
+        </label>
+      </div>
+
+      <pre>
+    &lt;label&gt;
+      Textarea label
+      &lt;textarea placeholder=&quot;None&quot;&gt;&lt;/textarea&gt;
+    &lt;/label&gt;
+      </pre>
+
+      <div>
+        <label>
+          Select Menu
+          <select>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="5">5</option>
+          </select>
+        </label>
+      </div>
+
+      <pre>
+    &lt;div&gt;
+      &lt;label&gt;
+        Select Menu
+        &lt;select&gt;
+          &lt;option value=&quot;1&quot;&gt;1&lt;/option&gt;
+          &lt;option value=&quot;2&quot;&gt;2&lt;/option&gt;
+          &lt;option value=&quot;3&quot;&gt;3&lt;/option&gt;
+          &lt;option value=&quot;5&quot;&gt;5&lt;/option&gt;
+        &lt;/select&gt;
+      &lt;/label&gt;
+    &lt;/div&gt;
+      </pre>
+
+      <div>
+        <legend>
+          Radio buttons
+          <input
+            type="radio"
+            name="life"
+            value="homer"
+            id="lifehomer"
+            requihomer
+          /><label for="lifehomer">homer</label>
+          <input type="radio" name="life" value="marge" id="lifemarge" /><label
+            for="lifemarge"
+            >marge</label
+          >
+          <input type="radio" name="life" value="lisa" id="lifelisa" /><label
+            for="lifelisa"
+            >lisa</label
+          >
+        </legend>
+      </div>
+
+      <pre>
+    &lt;legend&gt;Radio buttons&lt;/legend&gt; 
+    &lt;input
+      type=&quot;radio&quot;
+      name=&quot;life&quot;
+      value=&quot;homer&quot;
+      id=&quot;lifehomer&quot;
+      requihomer
+    /&gt;&lt;label for=&quot;lifehomer&quot;&gt;homer&lt;/label&gt;
+    &lt;input type=&quot;radio&quot; name=&quot;life&quot; value=&quot;marge&quot; id=&quot;lifemarge&quot; /&gt;&lt;label
+      for=&quot;lifemarge&quot;
+      &gt;marge&lt;/label
+    &gt;
+    &lt;input type=&quot;radio&quot; name=&quot;life&quot; value=&quot;lisa&quot; id=&quot;lifelisa&quot; /&gt;&lt;label
+      for=&quot;lifelisa&quot;
+      &gt;lisa&lt;/label
+    &gt;     
+      </pre>
+
+      <div>
+        <legend>Checkboxes</legend>
+        <input id="checkbox1" type="checkbox" /><label for="checkbox1">1</label>
+        <input id="checkbox2" type="checkbox" /><label for="checkbox2">2</label>
+        <input id="checkbox3" type="checkbox" /><label for="checkbox3">3</label>
+      </div>
+
+      <pre>
+    &lt;legend&gt;Checkboxes&lt;/legend&gt;
+    &lt;input id=&quot;checkbox1&quot; type=&quot;checkbox&quot; /&gt;&lt;label for=&quot;checkbox1&quot;&gt;1&lt;/label&gt;
+    &lt;input id=&quot;checkbox2&quot; type=&quot;checkbox&quot; /&gt;&lt;label for=&quot;checkbox2&quot;&gt;2&lt;/label&gt;
+    &lt;input id=&quot;checkbox3&quot; type=&quot;checkbox&quot; /&gt;&lt;label for=&quot;checkbox3&quot;&gt;3&lt;/label&gt;
+      </pre>
+      <p>
+        You can learn more at
+        <a href="https://get.foundation/sites/docs/forms.html"
+          >https://get.foundation/sites/docs/forms.html</a
+        >
+      </p>
     </div>
 
     <div id="docs">
       <h2>Official Documentation</h2>
-      <p>You can view the offical documentation at <a href="https://get.foundation/sites/docs/">https://get.foundation/sites/docs/</a></p>
+      <p>
+        You can view the offical documentation at
+        <a href="https://get.foundation/sites/docs/"
+          >https://get.foundation/sites/docs/</a
+        >
+      </p>
     </div>
 
     <script>

@@ -1,0 +1,5 @@
+Foundation doesn't have many utilities. There doesn't seem to be an easy 
+way to choose background colors. A lot of the utilities are missing. 
+This is perhaps an intentional design, but I don't like it.
+Foundation also seems to put an emphasis on downloading the files and using
+SASS processor.

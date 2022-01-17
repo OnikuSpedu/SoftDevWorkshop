@@ -1,0 +1,56 @@
+Shadman Rakib
+SoftDev
+K24 -- Provisioning Droplets
+2022-01-12
+time spent: 0.3
+
+Notable Thingies:
+
+Create a new project from the digital ocean dashboard
+Create a droplet with Ubuntu 20.04 LTS x64, desired plan, desired CPU, desired datacenter region. Make sure to use SSH keys for authentication.
+Open up the control panel for the droplet.
+Copy the ipv4.
+Open your terminal, and ssh into the root user. 
+    ```
+    ssh root@your_server_ip 
+    ```
+Add a user
+    ```
+    adduser [INSERT USERNAME]
+    ```
+Add your new user to the sudo group
+    ```
+    usermod -aG sudo sammy
+    ```
+Set firewall to allow SSH connections
+    ```
+    ufw allow OpenSSH
+    ```
+Enable firewall
+    ```
+    ufw enable
+    ```
+Copy SSH keys
+    ```
+    rsync --archive --chown=[INSERT USERNAME]:[INSERT USERNAME] ~/.ssh /home/[INSERT USERNAME]
+    ```
+Edit the /etc/ssh/sshd_config file and replace `PermitRootLogin yes` with `PermitRootLogin no`
+Restart SSH `sudo service ssh restart`
+SSH into the new user
+Update the package manager cache. `sudo apt update`
+Install Apache2 `sudo apt install apache2`
+Allow Apache in the firewall `sudo ufw allow in "Apache"`
+
+Install mod_wsgi
+    ```
+    sudo apt-get install libapache2-mod-wsgi python-dev
+    ```
+Enable mod_wsgi
+    ```
+    sudo a2enmod wsgi 
+
+    ```
+Create the /var/www directory
+    ```
+    cd /var/www 
+    ```

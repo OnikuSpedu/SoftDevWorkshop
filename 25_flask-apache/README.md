@@ -93,15 +93,15 @@ Guide to deploying Flask app USING Apache2
 		CustomLog ${APACHE_LOG_DIR}/access.log combined
    </VirtualHost>
    ```
-   Enable the virtual host for the app
+9. Enable the virtual host for the app
    ```
    sudo a2ensite FlaskApp
    ```
-9. Restart Apache2
+10. Restart Apache2
    ```
    sudo service apache2 restart 
    ```
-10. Go to your droplet's IPV4 in your browswer
+11. Go to your droplet's IPV4 in your browswer
 
 ### Resources
 * https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps

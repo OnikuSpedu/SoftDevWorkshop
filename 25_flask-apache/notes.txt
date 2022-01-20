@@ -1,0 +1,2 @@
+WSGI - web server gateway interface
+VirtualHost - contains directives that apply to a specific hostname

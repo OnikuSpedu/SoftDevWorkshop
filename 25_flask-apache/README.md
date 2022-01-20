@@ -8,7 +8,7 @@ Guide to deploying Flask app USING Apache2
 ### Prerequisites:
 - installed Apache2
 
-## Instructions (Two Different Methods)
+## Instructions
 
 1. Install and enable Apache mod_wsgi module
    ```

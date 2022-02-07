@@ -1,0 +1,7 @@
+Shadman Rakib
+SoftDev
+K27 -- Converting Scheme to JavaScript
+2022-02-04
+time spent: 0.5 Hours
+
+Nothing, really. We did use JS and HTML DOM to display our JS output. I'm already proficient at TypeScript.

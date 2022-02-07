@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html>
+    <body>
+        <div id="result">
+        </div>
+        <script async>
+            function fact(n){
+                if (n == 0){
+                    return 1
+                } else {
+                    return fact(n - 1) * n
+                }
+            }
+
+            function fib(n){
+                if (n <= 1){
+                    return n
+                } else {
+                    return fib(n - 1) + fib(n - 2)
+                }
+            }
+
+            const factresult = (fact(3))
+            const fibresult = (fib(3))
+            document.getElementById("result").innerHTML = "Factorial of 3: " + factresult + "<br>3rd Fibonacci number: " + fib(3)
+        </script>
+    </body>
+</html>

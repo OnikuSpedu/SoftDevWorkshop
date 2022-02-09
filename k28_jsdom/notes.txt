@@ -1,0 +1,9 @@
+Shadman Rakib, Alif Abdullah, Alejandro Alonso
+SoftDev
+K28 - Getting more comfortable with the dev console and the DOM
+2022-02-08t
+
+I'm already proficient at JavaScript and TypeScript because of working at Provecho.bio.
+Nothing too interesting to note. The DOM is essentially a tree, so maybe it would be
+fun to invert it. Manually creating elements is a pain, and I now have a deeper appreciation
+for Svelte and React.

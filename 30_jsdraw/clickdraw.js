@@ -47,13 +47,9 @@ var drawCircle = function (e) {
   console.log("mouse click registered", mouseX, mouseY);
 };
 
-var draw = (e) => {
-  mode === "rect" ? drawRect(e) : drawCircle(e);
-};
+var draw = (e) => mode === "rect" ? drawRect(e) : drawCircle(e);
 
-var wipeCanvas = () => {
-  ctx.clearRect(0, 0, c.width, c.height);
-};
+var wipeCanvas = () => ctx.clearRect(0, 0, c.width, c.height);
 
 c.addEventListener("click", draw);
 

@@ -12,6 +12,9 @@ var requestID;
 
 var clear = (e) => ctx.clearRect(0,0,c.width, c.height);
 
+const IMG_WIDTH = 150;
+const IMG_HEIGHT = 100;
+
 var img = new Image();
 img.src = 'logo_dvd.jpg';
 
@@ -20,6 +23,9 @@ var growing = true;
 
 var x = 0;
 var y = 0;
+
+var Vx = 1;
+var Vy = 1;
 
 var drawDot = function () {
   if (requestID) {
@@ -58,7 +64,10 @@ function drawImage() {
       window.cancelAnimationFrame(requestID);
   }
 
-  ctx.drawImage(img, x, y, 150, 100);
+  x += Vx;
+  y += Vy;
+
+  ctx.drawImage(img, x, y, IMG_WIDTH, IMG_HEIGHT);
 
   requestID = window.requestAnimationFrame(drawImage);
 }
@@ -70,10 +79,10 @@ function drawInitialImage() {
       window.cancelAnimationFrame(requestID);
   }
 
-  x = Math.floor(Math.random() * (c.width - 150)) 
-  y = Math.floor(Math.random() * (c.height - 100)) 
+  x = Math.floor(Math.random() * (c.width - IMG_WIDTH)) 
+  y = Math.floor(Math.random() * (c.height - IMG_HEIGHT)) 
 
-  ctx.drawImage(img, x, y, 150, 100);
+  ctx.drawImage(img, x, y, IMG_WIDTH, IMG_HEIGHT);
 
   requestID = window.requestAnimationFrame(drawImage);
 }

@@ -64,6 +64,22 @@ function drawImage() {
       window.cancelAnimationFrame(requestID);
   }
 
+  if (x <= 0) {
+    Vx = 1;
+  }
+
+  if (x + IMG_WIDTH >= c.width) {
+    Vx = -1;
+  }
+
+  if (y <= 0) {
+    Vy = 1;
+  }
+
+  if (y + IMG_HEIGHT >= c.height) {
+    Vy = -1;
+  }
+
   x += Vx;
   y += Vy;
 
@@ -77,6 +93,18 @@ function drawInitialImage() {
 
   if (requestID) {
       window.cancelAnimationFrame(requestID);
+  }
+
+  if (Math.random() > 0.5) {
+    Vx = 1;
+  } else {
+    Vx = -1;
+  }
+
+  if (Math.random() > 0.5) {
+    Vy = 1;
+  } else {
+    Vy = -1;
   }
 
   x = Math.floor(Math.random() * (c.width - IMG_WIDTH)) 

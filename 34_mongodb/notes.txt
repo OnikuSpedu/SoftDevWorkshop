@@ -1,0 +1,23 @@
+Shadman Rakib
+
+With tabular data dictates application. Requires restruction. Causes downtimes.
+Mongo process starts with app then data model then improve both. No downtime. Use dictates data.
+
+Data model should change with needs of application.
+
+Link vs Embeded
+Link - can look up more info
+Embeded - info added to the documents data
+
+Relationships
+One to one - 
+One to many - user has many articles
+Many to many - many articles have many comments
+
+Think about queries when choosing between link and embed.
+
+Added a schema version attribute for version control.
+
+Already familiar with bucket pattern and computed pattern from work.
+
+Mongo has good resources.

@@ -1,0 +1,9 @@
+Shadman Rakib
+SoftDev pd2
+K35 -- MongoDB 101 Chapter 1
+2022-05-02
+
+NoSQL database - no rows and columns
+Documents are maps and contain data.
+Collections contain documents.
+Atlas is a cloud db.

@@ -1,0 +1,11 @@
+Shadman Rakib
+SoftDev pd2
+K36 -- MongoDB 101 Chapter 2
+2022-05-02
+
+BSON is Binary JSON. More performant but not human readable.
+MongoDB stores in BSON but displays in JSON.
+mongodump to export BSON.
+mongoexport to export JSON.
+mongorestore to import from BSON
+mongoimport to import from JSON

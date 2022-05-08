@@ -1,0 +1,8 @@
+Shadman Rakib
+SoftDev pd2
+K38 -- MongoDB 101 Chapter 4
+2022-05-08
+
+Comparison Operators: $eq, $ne, $gt, $lt, $gte, $lte
+Logical Operators: $and, $or, $nor, $not
+Array Operators: $all, $size, $elemMatch

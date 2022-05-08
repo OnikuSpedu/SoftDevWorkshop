@@ -1,0 +1,15 @@
+Shadman Rakib
+SoftDev pd2
+K37 -- MongoDB 101 Chapter 3
+2022-05-08
+
+db.<collection>.findOne()
+db.<collection>.insert(<document> | <list_of_documents>)
+
+Update operators: $inc, $set, $push
+db.<collection>.updateOne(<query>, <operators>)
+db.<collection>.updateMany(<query>, <operators>)
+
+db.<collection>.deleteOne(<query>)
+db.<collection>.deleteMany(<query>)
+db.<collection>.drop()

@@ -1,0 +1,21 @@
+Shadman Rakib
+SoftDev pd2
+K40 -- MongoDB 101 Chapter 6
+2022-05-11
+
+
+atlas data explorer
+index tab - view, see usage, make, drop indexes for collections
+schema anti-patterns tabs - advise on data model changes
+aggregation tab - aggregation pipeline gui
+
+other atlas features:
+billing
+authorization : projects, teams
+projects:  can have multiple atlas clusters
+realm: auto scaling based on needs
+charts:  dynamic data visualizations
+
+compass: gui for db
+debug retrieval
+validations, schema

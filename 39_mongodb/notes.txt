@@ -1,0 +1,27 @@
+Shadman Rakib
+SoftDev pd2
+K39 -- MongoDB 101 Chapter 5
+2022-05-11
+
+aggregation framework
+db.<collection>.aggregate([{"$match": <match params>}, {"$project": <data response params>}])
+
+$group (aggregation)
+{"$group": {"_id": <expression>, <field1>: {<accumulator1>: <expression1>}, ...}} // From mongodb docs: https://www.mongodb.com/docs/manual/reference/operator/aggregation/group/
+
+sort and limit
+.sort(<sort params object>) 1 = ascending, -1 = descending
+.limit(<num>)
+
+indexes
+improving querying performance
+createIndex(<sort params>)
+
+data modeling:
+store data in the way its used
+
+upsert:
+option for update and updateone
+create document if no match
+
+
